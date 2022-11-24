@@ -88,14 +88,18 @@
                 </div>
                 <div class="audiopreview">
                     <div>
-                        <p class="paragraph">Piano:</p>
+                        <p class="paragraph">
+                            <a href="#sheet">Piano:</a>
+                        </p>
                         <audio controls src="data/piano.mp3">
                             Your browser does not support the
                             <code>audio</code> element.
                         </audio>
                     </div>
                     <div>
-                        <p class="paragraph">MIDI Transcription:</p>
+                        <p class="paragraph">
+                            <a href="#sheet_pre">MIDI Transcription:</a>
+                        </p>
                         <audio controls src="data/piano_pre.mp3">
                             Your browser does not support the
                             <code>audio</code> element.
@@ -119,6 +123,23 @@
                     </div>
                 </div>
             </div>
+
+            <div class="section">
+                <h1>MIDI to Note Sheet</h1>
+
+                <p> Here are the sheets for 2 audio clips from last section, represents <i>Piano</i> and <i>MIDI
+                        Transcription</i> respectively. </p>
+                <p id="sheet">Sheet of ground truth</p>
+                <div class="imagewrapper">
+                    <img src="data/sheet.png" />
+                </div>
+                <p id="sheet_pre">Sheet of MIDI transcription</p>
+                <div class="imagewrapper">
+                    <img src="data/sheet_pre.png" />
+                </div>
+            </div>
+
+
             <div class="section">
                 <h1>References</h1>
                 <ol>
