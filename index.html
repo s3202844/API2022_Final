@@ -61,18 +61,22 @@
                     understand." It uses digital control signals of notes to record music <a href="#cite1">[1]</a>.
                 </p>
                 <p>
-                    Considering the importance of this part, we chose a novel research, <a
-                        href="https://basicpitch.spotify.com/" target="_blank">Basic Pitch</a>, as the basis of our
+                    Considering the importance of this part, we chose a novel research,
+                    <a href="https://basicpitch.spotify.com/" target="_blank">Basic Pitch</a>, as the basis of our
                     work <a href="#cite2">[2]</a>. This research was released in conjunction with Spotify's publication
                     at ICASSP 2022. It introduces a lightweight yet powerful Automatic Music Transcription (AMT)
-                    model. To train our model, we use three datasets, MTG-QBH, MAESTRO, and MUSDB18 <a
-                        href="#cite3">[3-5]</a>. Here are some exciting transcription results for different instruments
+                    model. To train our model, we use three datasets,
+                    <a href="https://www.upf.edu/web/mtg/mtg-qbh" target="_blank">MTG-QBH</a>,
+                    <a href="https://magenta.tensorflow.org/datasets/maestro" target="_blank">MAESTRO</a>, and
+                    <a href="https://source-separation.github.io/tutorial/data/musdb18.html"
+                        target="_blank">MUSDB18</a>. Here are some exciting transcription results for different
+                    instruments
                     (including vocals).
                 </p>
 
                 <div class="audiopreview">
                     <div>
-                        <p class="paragraph">Vocals:</p>
+                        <p class="paragraph">Vocals (from MUSDB18):</p>
                         <audio controls src="data/vocals.mp3">
                             Your browser does not support the
                             <code>audio</code> element.
@@ -89,7 +93,7 @@
                 <div class="audiopreview">
                     <div>
                         <p class="paragraph">
-                            <a href="#sheet" id="piano">Piano:</a>
+                            <a href="#sheet" id="piano">Piano</a> (from MTG-QBH):
                         </p>
                         <audio controls src="data/piano.mp3">
                             Your browser does not support the
@@ -108,7 +112,7 @@
                 </div>
                 <div class="audiopreview">
                     <div>
-                        <p class="paragraph">Guitar:</p>
+                        <p class="paragraph">Guitar (from MAESTRO):</p>
                         <audio controls src="data/guitar.mp3">
                             Your browser does not support the
                             <code>audio</code> element.
@@ -122,6 +126,17 @@
                         </audio>
                     </div>
                 </div>
+
+                <p></p>
+
+                <div class="imagewrapper">
+                    <img src="data/basic_pitch.png" width="90%" />
+                </div>
+                <p align="center"><b>Figure</b> , Comparison of <i>Basic Pitch</i> and a recent, strong baseline model,
+                    MI-AMT <a href="#cite3">[3]</a>. It uses a U-Net architecture with an attention mechanism and outputs a note-activation
+                    posteriorgram with a total of over 20M parameters, trained on MAESTRO and MusicNet.
+                </p>
+
             </div>
 
             <div class="section">
@@ -153,17 +168,9 @@
                         Processing (ICASSP) (pp. 781-785). IEEE.
                     </li>
                     <li class="listitem" id="cite3">
-                        Molina, E., Barbancho-Perez, A. M., Tardon-Garcia, L. J., & Barbancho-Perez, I. (2014).
-                        Evaluation framework for automatic singing transcription.
-                    </li>
-                    <li class="listitem" id="cite4">
-                        Xi, Q., Bittner, R. M., Pauwels, J., Ye, X., & Bello, J. P. (2018, September). GuitarSet: A
-                        Dataset for Guitar Transcription. In ISMIR (pp. 453-460).
-                    </li>
-                    <li class="listitem" id="cite5">
-                        Stöter, F. R., Liutkus, A., & Ito, N. (2018, July). The 2018 signal separation evaluation
-                        campaign. In International Conference on Latent Variable Analysis and Signal Separation (pp.
-                        293-305). Springer, Cham.
+                        Wu, Y. T., Chen, B., & Su, L. (2020). Multi-instrument automatic music transcription with
+                        self-attention-based instance segmentation. IEEE/ACM Transactions on Audio, Speech, and Language
+                        Processing, 28, 2796-2809.
                     </li>
                 </ol>
             </div>
