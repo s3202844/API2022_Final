@@ -89,7 +89,7 @@
                 <div class="audiopreview">
                     <div>
                         <p class="paragraph">
-                            <a href="#sheet">Piano:</a>
+                            <a href="#sheet" id="piano">Piano:</a>
                         </p>
                         <audio controls src="data/piano.mp3">
                             Your browser does not support the
@@ -98,7 +98,7 @@
                     </div>
                     <div>
                         <p class="paragraph">
-                            <a href="#sheet_pre">MIDI Transcription:</a>
+                            <a href="#sheet_pre" id="midi_trans">MIDI Transcription:</a>
                         </p>
                         <audio controls src="data/piano_pre.mp3">
                             Your browser does not support the
@@ -129,11 +129,11 @@
 
                 <p> Here are the sheets for 2 audio clips from last section, represents <i>Piano</i> and <i>MIDI
                         Transcription</i> respectively. </p>
-                <p id="sheet">Sheet of ground truth</p>
+                <p id="sheet">Sheet of ground truth(<a href="#piano">Piano</a>)</p>
                 <div class="imagewrapper">
                     <img src="data/sheet.png" />
                 </div>
-                <p id="sheet_pre">Sheet of MIDI transcription</p>
+                <p id="sheet_pre">Sheet of <a href="#midi_trans">MIDI transcription</a></p>
                 <div class="imagewrapper">
                     <img src="data/sheet_pre.png" />
                 </div>
