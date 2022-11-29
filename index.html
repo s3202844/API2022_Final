@@ -20,16 +20,6 @@
             <div class="abstract">
                 <div class="section">
                     <h1 class="sectiontitle">Abstract</h1>
-                    <p class="paragraph"> To generate the sheet music, we used the Mingus library in Python to read the midi files.
-                        This library is able to convert the midi files to an internal representation, which can then be converted to
-                        a so-called 'LilyPad' string. This string will then be used by LilyPad, another library, to generate a PDF of
-                        the sheet music.
-                    </p>
-                    <p class="paragraph">
-                        When trying to read the midi files, we ran into some issues of Mingus not being able to interpret the specific
-                        midi format as generated in the earlier steps. This means that we first had to make some changes to the midi output
-                        of our previous steps, before we were able to interpret these midi files.
-                    </p>
                 </div>
             </div>
 
@@ -142,6 +132,17 @@
             <div class="section">
                 <h1>MIDI to Note Sheet</h1>
 
+                <p class="paragraph"> To generate the sheet music, we used the Mingus library in Python to read the midi files.
+                    This library is able to convert the midi files to an internal representation, which can then be converted to
+                    a so-called 'LilyPad' string. This string will then be used by LilyPad, another library, to generate a PDF of
+                    the sheet music.
+                </p>
+                <p class="paragraph">
+                    When trying to read the midi files, we ran into some issues of Mingus not being able to interpret the specific
+                    midi format as generated in the earlier steps. This means that we first had to make some changes to the midi output
+                    of our previous steps, before we were able to interpret these midi files.
+                </p>
+                
                 <p> Here are the sheets for 2 audio clips from last section, represents <i>Piano</i> and <i>MIDI
                         Transcription</i> respectively. </p>
                 <p id="sheet">Sheet of ground truth(<a href="#piano">Piano</a>)</p>
