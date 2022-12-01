@@ -15,8 +15,7 @@
         <main class="main">
             <h1 class="title">Sheet Music Generation</h1>
             <!-- <h3 class="authorby">Fall 2022 API Final Project by:</h3> -->
-            <h3 class="">Yuang Yuan, Haoran Yin, Pim Bax</h3>
-
+            <center><h3 class="">Yuang Yuan, Haoran Yin, Pim Bax</h3></center>
             <div class="abstract">
                 <div class="section">
                     <h1 class="sectiontitle">Abstract</h1>
@@ -25,18 +24,56 @@
 
             <div class="section">
                 <h1 class="sectiontitle">Audio Separation</h1>
-                <p class="paragraph"> (Bullshit content) Generally speaking, students will withdraw from
-                    the membership, how should it be realized. Now, it is very, very important to solve the problem
-                    of student union withdrawal. Therefore, after the above discussion, from this point of view,
-                    Russell Baker once mentioned that even if a person has reached the top, he still has to strive
-                    for self-improvement. This seems to answer my doubts. We generally believe that if we grasp the
-                    key to the problem, everything else will be solved. From this point of view, I think, well, in
-                    summary, everyone has to face these problems. When faced with this kind of problem, generally
-                    speaking, students will withdraw from the club, what will happen if it happens, and what will
-                    happen if it doesn't happen. From this point of view, however, even so, the emergence of the
-                    student union withdrawal still represents a certain significance. Under such a difficult choice,
-                    I thought about it and couldn't sleep or eat. We have to face a very embarrassing fact, that is.</p>
+                <p class="paragraph"> 
+                    Audio separation is the first step of Sheet Music Generation in which the raw audio will be separated into different tracks including vocal, paino, guitar and so on. We can then use the separated audios to generate MIDI files.</p>
+                <p class="paragraph">
+                    Our audio source separation method is based on Demucs<a href="#cite1">[4]</a>, a hybrid transform-based model, proposed by Facebook AI Research. See below the example audio separation results:</p>
+                
+                <p>
+                    <div class="audiopreview">
+                        <div>
+                            <p class="paragraph">Raw Audio (from MUSDB18):</p>
+                            <audio controls src="data/raw.mp3">
+                                Your browser does not support the
+                                <code>audio</code> element.
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="audiopreview">
+                        <div>
+                            <p class="paragraph">Separated Track(vocals):</p>
+                            <audio controls src="data/vocals_sep.mp3">
+                                Your browser does not support the
+                                <code>audio</code> element.
+                            </audio>
+                        </div>
+                        <div>
+                            <p class="paragraph">Separated Track(drums):</p>
+                            <audio controls src="data/drums.mp3">
+                                Your browser does not support the
+                                <code>audio</code> element.
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="audiopreview">
+                        <div>
+                            <p class="paragraph">Separated Track(bass):</p>
+                            <audio controls src="data/bass.mp3">
+                                Your browser does not support the
+                                <code>audio</code> element.
+                            </audio>
+                        </div>
+                        <div>
+                            <p class="paragraph">Separated Track(other):</p>
+                            <audio controls src="data/other.mp3">
+                                Your browser does not support the
+                                <code>audio</code> element.
+                            </audio>
+                        </div>
+                    </div>
+                </p>
             </div>
+                
 
             <div class="section">
                 <h1 class="sectiontitle">Audio to MIDI</h1>
@@ -172,6 +209,9 @@
                         Wu, Y. T., Chen, B., & Su, L. (2020). Multi-instrument automatic music transcription with
                         self-attention-based instance segmentation. IEEE/ACM Transactions on Audio, Speech, and Language
                         Processing, 28, 2796-2809.
+                    </li>
+                    <li class="listitem" id="cite4">
+                        Défossez, Alexandre, et al. Music source separation in the waveform domain. arXiv preprint arXiv:1911.13254 (2019).
                     </li>
                 </ol>
             </div>
