@@ -15,7 +15,9 @@
         <main class="main">
             <h1 class="title">Sheet Music Generation</h1>
             <!-- <h3 class="authorby">Fall 2022 API Final Project by:</h3> -->
-            <center><h3 class="">Yuang Yuan, Haoran Yin, Pim Bax</h3></center>
+            <center>
+                <h3 class="">Yuang Yuan, Haoran Yin, Pim Bax</h3>
+            </center>
             <div class="abstract">
                 <div class="section">
                     <h1 class="sectiontitle">Abstract</h1>
@@ -24,56 +26,60 @@
 
             <div class="section">
                 <h1 class="sectiontitle">Audio Separation</h1>
-                <p class="paragraph"> 
-                    Audio separation is the first step of Sheet Music Generation in which the raw audio will be separated into different tracks including vocal, paino, guitar and so on. We can then use the separated audios to generate MIDI files.</p>
                 <p class="paragraph">
-                    Our audio source separation method is based on Demucs<a href="#cite4">[1]</a>, a hybrid transform-based model, proposed by Facebook AI Research. See below the example audio separation results:</p>
-                
+                    Audio separation is the first step of Sheet Music Generation in which the raw audio will be
+                    separated into different tracks including vocal, paino, guitar and so on. We can then use the
+                    separated audios to generate MIDI files.</p>
+                <p class="paragraph">
+                    Our audio source separation method is based on Demucs<a href="#cite4">[1]</a>, a hybrid
+                    transform-based model, proposed by Facebook AI Research. See below the example audio separation
+                    results:</p>
+
                 <p>
-                    <div class="audiopreview">
-                        <div>
-                            <p class="paragraph">Raw Audio (from MUSDB18):</p>
-                            <audio controls src="data/raw.mp3">
-                                Your browser does not support the
-                                <code>audio</code> element.
-                            </audio>
-                        </div>
+                <div class="audiopreview">
+                    <div>
+                        <p class="paragraph">Raw Audio (from MUSDB18):</p>
+                        <audio controls src="data/raw.mp3">
+                            Your browser does not support the
+                            <code>audio</code> element.
+                        </audio>
                     </div>
-                    <div class="audiopreview">
-                        <div>
-                            <p class="paragraph">Separated Track(vocals):</p>
-                            <audio controls src="data/vocals_sep.mp3">
-                                Your browser does not support the
-                                <code>audio</code> element.
-                            </audio>
-                        </div>
-                        <div>
-                            <p class="paragraph">Separated Track(drums):</p>
-                            <audio controls src="data/drums.mp3">
-                                Your browser does not support the
-                                <code>audio</code> element.
-                            </audio>
-                        </div>
+                </div>
+                <div class="audiopreview">
+                    <div>
+                        <p class="paragraph">Separated Track(vocals):</p>
+                        <audio controls src="data/vocals_sep.mp3">
+                            Your browser does not support the
+                            <code>audio</code> element.
+                        </audio>
                     </div>
-                    <div class="audiopreview">
-                        <div>
-                            <p class="paragraph">Separated Track(bass):</p>
-                            <audio controls src="data/bass.mp3">
-                                Your browser does not support the
-                                <code>audio</code> element.
-                            </audio>
-                        </div>
-                        <div>
-                            <p class="paragraph">Separated Track(other):</p>
-                            <audio controls src="data/other.mp3">
-                                Your browser does not support the
-                                <code>audio</code> element.
-                            </audio>
-                        </div>
+                    <div>
+                        <p class="paragraph">Separated Track(drums):</p>
+                        <audio controls src="data/drums.mp3">
+                            Your browser does not support the
+                            <code>audio</code> element.
+                        </audio>
                     </div>
+                </div>
+                <div class="audiopreview">
+                    <div>
+                        <p class="paragraph">Separated Track(bass):</p>
+                        <audio controls src="data/bass.mp3">
+                            Your browser does not support the
+                            <code>audio</code> element.
+                        </audio>
+                    </div>
+                    <div>
+                        <p class="paragraph">Separated Track(other):</p>
+                        <audio controls src="data/other.mp3">
+                            Your browser does not support the
+                            <code>audio</code> element.
+                        </audio>
+                    </div>
+                </div>
                 </p>
             </div>
-                
+
 
             <div class="section">
                 <h1 class="sectiontitle">Audio to MIDI</h1>
@@ -161,25 +167,30 @@
                     MusicNet. Average note event metrics on all test datasets for the baseline algorithm, proposed
                     method, and ablation experiments. The best score for each column is in bold. The shade of green
                     indicates how far a score is from the best score, with the worst scores in white. All non-underlined
-                    results are statistically significantly different with <i>p</i> < 0.05 compared with NMP
-                        (permetric/dataset) via a paired t-test. </p>
+                    results are statistically significantly different with <i>p</i>
+                    < 0.05 compared with NMP (permetric/dataset) via a paired t-test. </p>
 
             </div>
 
             <div class="section">
                 <h1>MIDI to Note Sheet</h1>
 
-                <p class="paragraph"> To generate the sheet music, we used the Mingus library in Python to read the midi files.
-                    This library is able to convert the midi files to an internal representation, which can then be converted to
-                    a so-called 'LilyPad' string. This string will then be used by LilyPad, another library, to generate a PDF of
+                <p class="paragraph"> To generate the sheet music, we used the Mingus library in Python to read the midi
+                    files.
+                    This library is able to convert the midi files to an internal representation, which can then be
+                    converted to
+                    a so-called 'LilyPad' string. This string will then be used by LilyPad, another library, to generate
+                    a PDF of
                     the sheet music.
                 </p>
                 <p class="paragraph">
-                    When trying to read the midi files, we ran into some issues of Mingus not being able to interpret the specific
-                    midi format as generated in the earlier steps. This means that we first had to make some changes to the midi output
+                    When trying to read the midi files, we ran into some issues of Mingus not being able to interpret
+                    the specific
+                    midi format as generated in the earlier steps. This means that we first had to make some changes to
+                    the midi output
                     of our previous steps, before we were able to interpret these midi files.
                 </p>
-                
+
                 <p> Here are the sheets for 2 audio clips from last section, represents <i>Piano</i> and <i>MIDI
                         Transcription</i> respectively. </p>
                 <p id="sheet">Sheet of ground truth(<a href="#piano">Piano</a>)</p>
@@ -191,6 +202,29 @@
                     <img src="data/sheet_pre.png" />
                 </div>
             </div>
+
+
+
+            <div class="section">
+                <h1>Applications</h1>
+                <h3>Play sheet</h3>
+                <p>An Android application that plays sheet music. The video shows how it plays the sheet generated by
+                    midi file from vocal sample above.</p>
+                <div class="imagewrapper">
+                    <video width="500" controls>
+                        <source src="data/play_sheet.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3>Rhythm Game</h3>
+                Here is a team project from another course this semester, Mutimedia Systems. Contributors: Haoran Yin,
+                Nan Sai, and Yingjie Li.
+                <div class="imagewrapper">
+                    <video width="500" controls>
+                        <source src="data/game.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
 
 
             <div class="section">
@@ -211,7 +245,8 @@
                         Processing, 28, 2796-2809.
                     </li>
                     <li class="listitem" id="cite4">
-                        Défossez, Alexandre, et al. Music source separation in the waveform domain. arXiv preprint arXiv:1911.13254 (2019).
+                        Défossez, Alexandre, et al. Music source separation in the waveform domain. arXiv preprint
+                        arXiv:1911.13254 (2019).
                     </li>
                 </ol>
             </div>
