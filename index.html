@@ -27,7 +27,7 @@
                 <p class="paragraph"> 
                     Audio separation is the first step of Sheet Music Generation in which the raw audio will be separated into different tracks including vocal, paino, guitar and so on. We can then use the separated audios to generate MIDI files.</p>
                 <p class="paragraph">
-                    Our audio source separation method is based on Demucs<a href="#cite1">[4]</a>, a hybrid transform-based model, proposed by Facebook AI Research. See below the example audio separation results:</p>
+                    Our audio source separation method is based on Demucs<a href="#cite4">[1]</a>, a hybrid transform-based model, proposed by Facebook AI Research. See below the example audio separation results:</p>
                 
                 <p>
                     <div class="audiopreview">
@@ -82,12 +82,12 @@
                     MIDI (Musical Instrument Digital Interface) was proposed in the early 1980s to solve the
                     communication problem between electro-acoustic instruments. MIDI is the most extensive music
                     standard format in the arranger world, and it can be called "music notation that computers can
-                    understand." It uses digital control signals of notes to record music <a href="#cite1">[1]</a>.
+                    understand." It uses digital control signals of notes to record music <a href="#cite1">[2]</a>.
                 </p>
                 <p>
                     Considering the importance of this part, we chose a novel research,
                     <a href="https://basicpitch.spotify.com/" target="_blank">Basic Pitch</a>, as the basis of our
-                    work <a href="#cite2">[2]</a>. This research was released in conjunction with Spotify's publication
+                    work <a href="#cite2">[3]</a>. This research was released in conjunction with Spotify's publication
                     at ICASSP 2022. It introduces a lightweight yet powerful Automatic Music Transcription (AMT)
                     model. To train our model, we use three datasets,
                     <a href="https://www.upf.edu/web/mtg/mtg-qbh" target="_blank">MTG-QBH</a>,
@@ -156,7 +156,7 @@
                     <img src="data/basic_pitch.png" width="90%" />
                 </div>
                 <p align="center"><b>Figure</b> , Comparison of <i>Basic Pitch</i> and a recent, strong baseline model,
-                    MI-AMT <a href="#cite3">[3]</a>. It uses a U-Net architecture with an attention mechanism and
+                    MI-AMT <a href="#cite3">[4]</a>. It uses a U-Net architecture with an attention mechanism and
                     outputs a note-activation posteriorgram with a total of over 20M parameters, trained on MAESTRO and
                     MusicNet. Average note event metrics on all test datasets for the baseline algorithm, proposed
                     method, and ablation experiments. The best score for each column is in bold. The shade of green
